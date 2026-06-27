@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+option java_package = "com.serialization.benchmark.model";
+option java_multiple_files = true;
+
+// ==========================================
+// LEVEL 1: FLAT DATA
+// ==========================================
+message UserFlat {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  bool is_active = 4;
+  double balance = 5;
+}
+
+// ==========================================
+// LEVEL 2: SHALLOW NESTED DATA
+// ==========================================
+message Address {
+  string street = 1;
+  string city = 2;
+  string zip_code = 3;
+  string country = 4;
+}
+
+message UserShallow {
+  int32 id = 1;
+  string name = 2;
+
+  repeated Address addresses = 3; 
+}
+
+// ==========================================
+// LEVEL 3: DEEPLY NESTED DATA 
+// ==========================================
+message Currency {
+  string code = 1;
+  string symbol = 2;
+}
+
+message TransactionHistory {
+  string transaction_id = 1;
+  double amount = 2;
+  string date = 3;
+  Currency currency = 4; 
+}
+
+message DeepAddress {
+  string street = 1;
+  string city = 2;
+
+  repeated TransactionHistory transactions = 3; 
+}
+
+message UserDeep {
+  int32 id = 1;
+  string name = 2;
+
+  repeated DeepAddress deep_addresses = 3; 
+}
