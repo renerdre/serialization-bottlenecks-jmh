@@ -1,0 +1,12 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,com/serialization/benchmark/MyBenchmark.setupData
+inline,com/serialization/benchmark/MyBenchmark.testJsonDeep
+inline,com/serialization/benchmark/MyBenchmark.testJsonFlat
+inline,com/serialization/benchmark/MyBenchmark.testJsonShallow
+inline,com/serialization/benchmark/MyBenchmark.testProtoDeep
+inline,com/serialization/benchmark/MyBenchmark.testProtoFlat
+inline,com/serialization/benchmark/MyBenchmark.testProtoShallow
